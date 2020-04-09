@@ -28,7 +28,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return{
-    onCreateUser: () => dispatch({type: 'CREATE_USER', payload: {id: '5', name: 'Trinh', email: 'trinh.nguyen@pycogroup.com', active: true}}),
+    onCreateUser: () => dispatch({type: 'CREATE_USER', payload: {id: '5', name: 'Trinh', email: 'trinh.nguyen@pycogroup.com', active: false}}),
     onRemoveUser: () => dispatch({type: 'REMOVE_USER_BY_ID', payload: {id: '2'}}),
     onFilterUser: () => dispatch({type: 'FILTER_USER', payload: {active: true}}),
   };
