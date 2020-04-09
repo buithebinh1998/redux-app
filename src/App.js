@@ -14,6 +14,7 @@ class App extends Component {
           {loadUser}
           <button onClick={this.props.onCreateUser}>Add a new user</button>
           <button onClick={this.props.onRemoveUser}>Remove an user</button>
+          <button onClick={this.props.onFilterUser}>Filter active users</button>
         </div>
     );
   }
@@ -27,8 +28,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return{
-    onCreateUser: () => dispatch({type: 'CREATE_USER', payload: {id: '3', name: 'Trinh', email: 'trinh.nguyen@pycogroup.com', active: true}}),
+    onCreateUser: () => dispatch({type: 'CREATE_USER', payload: {id: '5', name: 'Trinh', email: 'trinh.nguyen@pycogroup.com', active: true}}),
     onRemoveUser: () => dispatch({type: 'REMOVE_USER_BY_ID', payload: {id: '2'}}),
+    onFilterUser: () => dispatch({type: 'FILTER_USER', payload: {active: true}}),
   };
 };
 
